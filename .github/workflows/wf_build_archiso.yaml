@@ -41,9 +41,9 @@ jobs:
           sed -i "s/^linux$/$kernel/" "$build"/packages.x86_64
 
           pkg_add=(
-          "zfs-linux-lts"
-          "linux-lts=6.18.44.1"
-          "linux-lts-headers=6.18.44.1"
+          "zfs-dkms"
+          "zfs-utils"
+          "$kernel-headers"
           )
           for a in "${pkg_add[@]}" ; do
               echo "$a" >> "$build"/packages.x86_64 
