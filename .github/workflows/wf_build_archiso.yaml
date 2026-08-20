@@ -23,6 +23,8 @@ jobs:
         shell: bash
         run: |
           kernel=linux-lts
+          linux-lts=6.18.44.1
+          linux-lts-headers=6.18.44.1
           name=archlinux-lts-zfs
           build="$PWD/$name"
           build_out="$build/out"
